@@ -1,24 +1,13 @@
 
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
 
-int main() {
-    int num1, num2, num3;
+if num1 >= num2 and num1 >= num3:
+    greatest = num1
+elif num2 >= num1 and num2 >= num3:
+    greatest = num2
+else:
+    greatest = num3
 
-    // Input three numbers from the user
-    printf("Enter the first number: ");
-    scanf("%d", &num1);
-    printf("Enter the second number: ");
-    scanf("%d", &num2);
-    printf("Enter the third number: ");
-    scanf("%d", &num3);
-
-    // Use if-else statements to find the greatest number
-    if (num1 >= num2 && num1 >= num3) {
-        printf("The greatest number is: %d\n", num1);
-    } else if (num2 >= num1 && num2 >= num3) {
-        printf("The greatest number is: %d\n", num2);
-    } else {
-        printf("The greatest number is: %d\n", num3);
-    }
-
-    return 0;
-}
+print("The greatest number among", num1, ",", num2, "and", num3, "is", greatest)
